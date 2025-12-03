@@ -123,6 +123,7 @@ If your repository doesn't include Dockerfiles yet, you can containerize the Fas
 
 ## License & Contact
 
-This repository currently has no explicit license file. Add a `LICENSE` MIT  to clarify reuse terms.
+This repository currently has no explicit license file. 
+`LICENSE` MIT .
 
 For questions or help, open an issue or contact the project owner.
