@@ -117,7 +117,7 @@ If your repository doesn't include Dockerfiles yet, you can containerize the Fas
 1. Open an issue describing the change or feature.
 2. Create a branch, make changes, and submit a pull request.
 
-If you want, I can also add a basic `LICENSE` file (e.g., MIT) and a short `CONTRIBUTING.md`.
+
 
 ---
 
