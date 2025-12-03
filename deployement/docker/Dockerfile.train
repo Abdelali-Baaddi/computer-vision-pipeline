@@ -1,0 +1,26 @@
+FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
+
+WORKDIR /app
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+COPY requirements_train.txt .
+RUN pip install --no-cache-dir -r requirements_train.txt
+
+# Copy source code
+COPY src/ ./src/
+COPY configs/ ./configs/
+
+# Create directories
+RUN mkdir -p data/processed models runs
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+
+# Entry point
+CMD ["python", "src/train.py"]
